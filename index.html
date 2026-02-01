@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Numbers 1–10 with Sound & Video</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', Arial, sans-serif;
+  background-color: #18a6a0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #e9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* HEADER IMAGE */
+.header-image {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.header-image img {
+  width: 180px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffcc00;
+  font-size: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.number {
+  font-size: 60px;
+  color: #ff66b2;
+  font-weight: bold;
+}
+
+.word {
+  font-size: 22px;
+  color: #333;
+}
+
+.objects {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+/* VIDEO SECTION */
+.video-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.video-section h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* LINK LANJUTAN */
+.next-link {
+  margin-top: 15px;
+}
+
+.next-link a {
+  display: inline-block;
+  text-decoration: none;
+  background: #ffcc00;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.next-link a:hover {
+  background: #ff9900;
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
+
+.video-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 720px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.video-thumbnail {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+iframe {
+  display: none;
+  width: 80%;
+  max-width: 720px;
+  height: 405px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- GAMBAR ATAS -->
+  <div class="header-image">
+    <img src="zaina.png" alt="Kids Learning Numbers">
+  </div>
+
+  <h1>NUMBERS 1–10</h1>
+
+  <div class="grid">
+    <div class="card" onclick="speak('one')">
+      <div class="number">1</div>
+      <div class="word">ONE</div>
+      <div class="objects">🍍</div>
+    </div>
+
+    <div class="card" onclick="speak('two')">
+      <div class="number">2</div>
+      <div class="word">TWO</div>
+      <div class="objects">🍈 🍈</div>
+    </div>
+
+    <div class="card" onclick="speak('three')">
+      <div class="number">3</div>
+      <div class="word">THREE</div>
+      <div class="objects">🥝 🥝 🥝</div>
+    </div>
+
+    <div class="card" onclick="speak('four')">
+      <div class="number">4</div>
+      <div class="word">FOUR</div>
+      <div class="objects">🍎 🍎 🍎 🍎</div>
+    </div>
+
+    <div class="card" onclick="speak('five')">
+      <div class="number">5</div>
+      <div class="word">FIVE</div>
+      <div class="objects">🍑 🍑 🍑 🍑 🍑</div>
+    </div>
+
+    <div class="card" onclick="speak('six')">
+      <div class="number">6</div>
+      <div class="word">SIX</div>
+      <div class="objects">🍌 🍌 🍌 🍌 🍌 🍌</div>
+    </div>
+
+    <div class="card" onclick="speak('seven')">
+      <div class="number">7</div>
+      <div class="word">SEVEN</div>
+      <div class="objects">🍊 🍊 🍊 🍊 🍊 🍊 🍊</div>
+    </div>
+
+    <div class="card" onclick="speak('eight')">
+      <div class="number">8</div>
+      <div class="word">EIGHT</div>
+      <div class="objects">🍇 🍇 🍇 🍇 🍇 🍇 🍇 🍇</div>
+    </div>
+
+    <div class="card" onclick="speak('nine')">
+      <div class="number">9</div>
+      <div class="word">NINE</div>
+      <div class="objects">🍉 🍉 🍉 🍉 🍉 🍉 🍉 🍉 🍉</div>
+    </div>
+
+    <div class="card" onclick="speak('ten')">
+      <div class="number">10</div>
+      <div class="word">TEN</div>
+      <div class="objects">🍒 🍒 🍒 🍒 🍒 🍒 🍒 🍒 🍒 🍒</div>
+    </div>
+  </div>
+
+  <!-- VIDEO PEMBELAJARAN -->
+<div class="video-section">
+  <h2>🎬 Learn Numbers with Video</h2>
+
+  <div class="video-wrapper" onclick="playVideo()">
+    <img 
+      src="https://img.youtube.com/vi/MIE2OPEHYLE/hqdefault.jpg" 
+      alt="Video Thumbnail"
+      class="video-thumbnail"
+    >
+    <div class="play-button">▶</div>
+  </div>
+
+  <iframe
+    id="youtubeVideo"
+    src=""
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+    <!-- LINK LANJUTAN -->
+    <div class="next-link">
+      <a href="https://yayanpusfito.github.io/ZAINANUMBERS1-100/" target="_blank">
+        👉 LANJUTKAN UNTUK NOMOR 1 – 100
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    👆 Klik angka untuk mendengar cara bacanya
+  </div>
+</div>
+
+<script>
+function speak(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "en-US";
+  utterance.rate = 0.8;
+  speechSynthesis.speak(utterance);
+}
+
+
+
+function playVideo() {
+  document.querySelector('.video-wrapper').style.display = 'none';
+
+  const iframe = document.getElementById('youtubeVideo');
+  iframe.src = "https://www.youtube.com/embed/MIE2OPEHYLE?autoplay=1";
+  iframe.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
